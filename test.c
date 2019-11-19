@@ -21,17 +21,19 @@
 //	return -1;
 //
 //}
-void Func(int* x){
-	*x += 1;
+void Printnum(int num){
+	if (num > 9){
+		Printnum(n / 10);
+	}
+	printf("%d ", num % 10);
 }
 int main(){
 	//int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
 	//int size = sizeof(arr) / sizeof(arr[0]);
 	//int ret = efcz(arr, size, 3);
 	//printf("ret=%d\n", ret);
-	int num = 0;
-	Func(&num);
-	printf("%d", num);
+	
+	printf("%d", Printnum(1234));
 	system("pause");
 	return 0;
 }
